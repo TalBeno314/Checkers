@@ -12,6 +12,7 @@ for (let i = 0; i < 8; i++) {
     }
 }
 
+let turn = "Red";
 let cellSize;
 let redCrown;
 let blackCrown;
@@ -64,7 +65,12 @@ function mousePressed() {
     if (mouseButton === RIGHT) {
         mainBoard[i][j].color = "Black";
     } else {
-        console.log(mainBoard[i][j]);
-        mainBoard[i][j].choose(mainBoard, "R");
+        //console.log(mainBoard[i][j]);
+        if (mainBoard[i][j].color == turn) {
+            if (mainBoard[i][j].isNextMove) {
+                turn = (turn == "Red") ? ("Black") : ("Red");
+            }
+            mainBoard[i][j].choose(mainBoard, turn);
+        }
     }
 }
