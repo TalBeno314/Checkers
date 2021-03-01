@@ -32,7 +32,7 @@ function draw() {
     stroke(0);
     strokeWeight(4);
     line(width, 0, width, height);
-    line(height, 0, height, width);
+    line(0, height, width, height);
     for (let i = 0; i < 8; i++) {
         for (let j = 0; j < 8; j++) {
             if ((i + j) % 2 == 1) {
