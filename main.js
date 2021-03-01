@@ -23,7 +23,7 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(680, 680);
+    createCanvas(min(windowWidth, windowHeight), min(windowWidth, windowHeight));
     cellSize = width / 8;
 }
 
